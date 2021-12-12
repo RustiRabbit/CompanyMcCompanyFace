@@ -7,7 +7,7 @@ export default function Page() {
         <>
             <div className={styles.container}>
                 <div className={styles.button}>
-                    <Link href="/page"><a className={styles.text}>Click Me!</a></Link> 
+                    <Link href="/boom"><a className={styles.text}>Click Me!</a></Link> 
                 </div>
             </div>
         </>

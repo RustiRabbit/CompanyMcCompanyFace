@@ -20,6 +20,7 @@ export default function Page() {
     if(Date.now() % 20 === 0) {
       const VineAudio = new Audio("/assets/vine.mp3");
       VineAudio.play();
+      console.log("bruh moment")
     }
   }
 
@@ -29,7 +30,7 @@ export default function Page() {
         <title>bababooey</title>
       </Head>
         <div className={styles.main} onMouseMove={MouseMove}>
-          <Image src={CenterPicture} layout="intrinsic" width={248} height={256} />
+          <Image className={styles.image} src={CenterPicture} layout="intrinsic" width={500} height={500} />
         </div>
     </>
     

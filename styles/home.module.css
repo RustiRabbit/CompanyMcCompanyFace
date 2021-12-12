@@ -1,7 +1,48 @@
 .main {
-  top: 100vh;
+  transition: opacity 3s ease 0s; 
+  opacity: 1; 
+  height: 100vh; 
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  display: flex;
+}
+
+.image {
+  width: 100%;
+
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  animation: shake 0.075s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+      transform: translate(1.0%, -0.5%);
+  }
+  12.5% {
+      transform: translate(0.5%, -1.0%);
+  }
+  25% {
+      transform: translate(0.0%, -0.5%);
+  }
+  37.5% {
+      transform: translate(-0.5%, 0.0%);
+  }
+  50% {
+      transform: translate(-1.0%, 0.5%);
+  }
+  62.5% {
+      transform: translate(-0.5%, 1.0%);
+  }
+  75% {
+      transform: translate(0.0%, 0.5%);
+  }
+  87.5% {
+      transform: translate(0.5%, 0.0%);
+  }
+  100% {
+      transform: translate(1.0%, -0.5%);
+  }
 }
