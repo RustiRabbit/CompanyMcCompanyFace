@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -26,11 +25,8 @@ export default function Page() {
 
   return (
     <>
-      <Head>
-        <title>bababooey</title>
-      </Head>
         <div className={styles.main} onMouseMove={MouseMove}>
-          <Image className={styles.image} src={CenterPicture} layout="intrinsic" width={500} height={500} />
+            <Image className={styles.image} src={CenterPicture} layout="intrinsic" width={500} height={500} />
         </div>
     </>
     

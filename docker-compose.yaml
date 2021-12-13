@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  nextserver:
+    image: oscarstickland/website-next
+    expose:
+      - "3000"
+  nginx:
+    image: oscarstickland/website-nginx
+    ports:  
+      - "80:80"

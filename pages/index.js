@@ -1,15 +1,28 @@
-import Link from "next/link"
+import { useState } from "react";
+import Head from "next/head";
 
-import styles from "../styles/intro.module.css";
+import Page from "../components/page";
+import Intro from "../components/intro";
 
-export default function Page() {
+export default function Index() {
+    let [intro, setIntro] = useState(true);
+
+    // Page Switching
+    let element;
+    if(intro == true) {
+        element = <Intro onClick={() => {setIntro(false)}} />
+    } else {
+        element = <Page />
+    }
+
+    // Rendering
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.button}>
-                    <Link href="/boom"><a className={styles.text}>Click Me!</a></Link> 
-                </div>
-            </div>
+            <Head>
+                <title>bababooey</title>
+            </Head>
+            
+            {element}
         </>
     )
 }
